@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TextypoFlow - AI 工作流编辑器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@xyflow/react/dist/style.css" rel="stylesheet" />
+    <style>
+      /* Custom Scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e4e4e7; /* zinc-200 */
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d4d4d8; /* zinc-300 */
+      }
+      
+      /* ReactFlow Customization overrides */
+      .react-flow__node {
+        border-radius: 0.75rem; /* rounded-xl */
+        border: none;
+        background: transparent;
+        width: auto;
+      }
+      .react-flow__handle {
+        width: 10px;
+        height: 10px;
+        background: #71717a; /* zinc-500 */
+        border: 2px solid white;
+      }
+      .react-flow__handle:hover {
+        background: #18181b; /* zinc-950 */
+      }
+      /* Animation for running nodes */
+      @keyframes border-flow {
+        0% { border-color: #3b82f6; box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+        50% { border-color: #60a5fa; box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.2); }
+        100% { border-color: #3b82f6; box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+      }
+      .node-running {
+        animation: border-flow 2s infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@xyflow/react": "https://aistudiocdn.com/@xyflow/react@^12.9.3",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-zinc-50 text-zinc-950 font-sans antialiased overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+
+通用技术规范：
+
+1.  **输出格式**：必须且仅输出一个包含完整代码的 Markdown 代码块 (```html ... ```)。不要包含任何解释性文字。
+2.  **技术栈**：
+    *   **HTML5** 语义化标签。
+    *   **Tailwind CSS** (通过 CDN: `https://cdn.tailwindcss.com`) 用于所有样式。
+    *   **Font Awesome** (通过 CDN: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css`) 用于图标。
+    *   **Google Fonts** (通过 CDN) 引入高品质字体（如 Inter, Noto Sans SC）。
+3.  **响应式**：确保内容在 PC 和移动端均能完美展示，优先适配容器宽度。
